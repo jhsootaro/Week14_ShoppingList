@@ -53,12 +53,12 @@ function showAll() {
 		let i 
 		for 
 			(i = 0; 
-			 i <= localStorage.length; 
+			 i < localStorage.length; 
 			 i++){
 				key = localStorage.key(i);
 				list += "<tr><td>" + key + "</td><td>" localStorage.getItem(key) + "</td></tr>";
 		}
-		document.getElementById('list').innerHTML = "<tr><th>Item</th><th>Quality</th></tr>" + list;} 
+		document.getElementById('list').innerHTML = "<tr><th>Item</th><th>Quality</th></tr>" + list} 
 		else  {
 		alert("Cannot store shopping list.Your browser does not support local storage");
 		}	
