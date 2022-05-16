@@ -35,21 +35,6 @@ function clearAll() {
 }
 
 
-function showAll() {
-	if (checkBrowser()) {
-		let key = "";
-		let list = "";
-		let i = 0;
-		for (i = 0; i <= localStorage.length - 1; i++){
-			key = localStorage.key(i);
-			list += "<tr><td>" key + "</td>\n<td>" localStorage.getItem(key) + "</td></tr>\n";
-		}
-		document.getElementById('list').innerHTML = list;
-	} else  {
-		alert("Cannot store shopping list.Your browser does not support local storage");
-	}	
-}
-
 function checkBrowser() {
 	if ('localStorage' in window && window['localStorage'] !== null){
 		//we can use local storage
@@ -59,3 +44,23 @@ function checkBrowser() {
 		return false;
 	}
 }
+
+
+function showAll() {
+	if (checkBrowser()) {
+		let key = "";
+		let list = "";
+		let i = 0;
+		for 
+			(i = 0; 
+			 i <= localStorage.length; 
+			 i++){
+				key = localStorage.key(i);
+				list += "<tr><td>" + key + "</td><td>" localStorage.getItem(key) + "</td></tr>";
+		}
+		document.getElementById('list').innerHTML = "<tr><th>Item</th><th>Quality</th></tr>" + list;} 
+		else  {
+		alert("Cannot store shopping list.Your browser does not support local storage");
+		}	
+}
+
