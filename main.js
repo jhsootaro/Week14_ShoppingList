@@ -50,7 +50,7 @@ function showAll() {
 	if (checkBrowser()) {
 		let key = "";
 		let list = "";
-		let i = 0;
+		let i 
 		for 
 			(i = 0; 
 			 i <= localStorage.length; 
